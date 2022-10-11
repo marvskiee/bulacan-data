@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="z-10 sm:flex block items-center justify-center flex-col mx-7 py-4" style=" min-height: calc(100vh - 79px)">
+    <div class="flex rounded-lg bg-white p-8">
+        <form action="#" method="POST" class="w-full">
+            <p class="text-2xl font-semibold mb-4">Student Profile</p>
+            <div class="flex gap-4 sm:flex-row flex-col">
+                <div class="flex gap-4 flex-col">
+                    <div class="flex flex-col gap-2">
+                        <label for="flname" class="font-semibold uppercase">Full Name:</label>
+                        <input type="text" class="p-4 rounded-lg border" id="flname" placeholder="John Doe" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="year" class="font-semibold uppercase">Year:</label>
+                        <select class="p-4 rounded-lg border" id="section">
+                            <option>
+                                3rd Year
+                            </option>
+                            <option>
+                                4th Year
+                            </option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="section" class="font-semibold uppercase">Section:</label>
+                        <select class="p-4 rounded-lg border" id="section">
+
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="email" class="font-semibold uppercase">Email:</label>
+                        <input type="email" class="p-4 rounded-lg border" id="email" placeholder="johndoe@gmail.com" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="province" class="font-semibold uppercase">Province:</label>
+                        <select class="p-4 rounded-lg border" id="province" placeholder="John Doe">
+                            <option value="Bulacan">Bulacan</option>
+                            <option value="Pampanga">Pampanga</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex gap-4 flex-col">
+                    <div class="flex flex-col gap-2">
+                        <label for="municipality" class="font-semibold uppercase">Municipality:</label>
+                        <select class="p-4 rounded-lg border" id="municipality">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="student_number" class="font-semibold uppercase">Student Number:</label>
+                        <input type="number" class="p-4 rounded-lg border" id="student_number"
+                            placeholder="10000132667" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="classification" class="font-semibold uppercase">Student Classification:</label>
+                        <select class="p-4 rounded-lg border" id="classification">
+                            <option value="regular">
+                                Regular
+                            </option>
+                            <option value="irregular">
+                                Irregular
+                            </option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="grades" class="font-semibold uppercase">Grades:(PER SUBJECT)</label>
+                        <select class="p-4 rounded-lg border" id="grades">
+                            <option value="1.00">
+                                1.00
+                            </option>
+                            <option value="1.25">
+                                1.25
+                            </option>
+                            <option value="1.50">
+                                1.50
+                            </option>
+                            <option value="1.75">
+                                1.75
+                            </option>
+                            <option value="2.00">
+                                2.00
+                            </option>
+                            <option value="2.25">
+                                2.25
+                            </option>
+                            <option value="2.50">
+                                2.50
+                            </option>
+                            <option value="2.75">
+                                2.75
+                            </option>
+                            <option value="3.00">
+                                3.00
+                            </option>
+                            <option value="4.00">
+                                4.00
+                            </option>
+                            <option value="5.00">
+                                5.00
+                            </option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="schedules" class="font-semibold uppercase">Class Schedules:</label>
+                        <select class="p-4 rounded-lg border" id="schedules">
+                            <option value="7:00 AM - 10:00 AM">
+                                7:00 AM - 10:00 AM
+                            </option>
+                            <option value="7:30 AM - 10:30 AM">
+                                7:30 AM - 10:30 AM
+                            </option>
+                            <option value="8:00 AM - 11:00 AM">
+                                8:00 AM - 11:00 AM
+                            </option>
+                            <option value="8:30 AM - 11:30 AM">
+                                8:30 AM - 11:30 AM
+                            </option>
+                            <option value="9:00 AM - 12:00 PM">
+                                9:00 AM - 12:00 PM
+                            </option>
+                            <option value="9:30 AM - 12:30 PM">
+                                9:30 AM - 12:30 PM
+                            </option>
+                            <option value="10:00 AM - 1:00 PM">
+                                10:00 AM - 1:00 PM
+                            </option>
+                            <option value="10:30 AM - 1:30 PM">
+                                10:30 AM - 1:30 PM
+                            </option>
+                            <option value="11:00 AM - 2:00 PM">
+                                11:00 AM - 2:00 PM
+                            </option>
+                            <option value="11:30 AM - 2:30 PM">
+                                11:30 AM - 2:30 PM
+                            </option>
+                            <option value="12:00 PM - 3:00 PM">
+                                12:00 PM - 3:00 PM
+                            </option>
+                            <option value="12:30 PM - 3:30 PM">
+                                12:30 PM - 3:30 PM
+                            </option>
+                            <option value="1:00 PM - 4:00 PM">
+                                1:00 PM - 4:00 PM
+                            </option>
+                            <option value="1:30 PM - 4:30 PM">
+                                1:30 PM - 4:30 PM
+                            </option>
+                            <option value="2:00 PM - 5:00 PM">
+                                2:00 PM - 5:00 PM
+                            </option>
+                            <option value="2:30 PM - 5:30 PM">
+                                2:30 PM - 5:30 PM
+                            </option>
+                            <option value="3:00 PM - 6:00 PM">
+                                3:00 PM - 6:00 PM
+                            </option>
+                            <option value="3:30 PM - 6:30 PM">
+                                3:30 PM - 6:30 PM
+                            </option>
+                            <option value="4:00 PM - 7:00 PM">
+                                4:00 PM - 7:00 PM
+                            </option>
+                            <option value="4:30 PM - 7:30 PM">
+                                4:30 PM - 7:30 PM
+                            </option>
+                            <option value="5:00 PM - 8:00 PM">
+                                5:00 PM - 8:00 PM
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-4 mt-4">
+                <a href="/" class="p-4 py-2 rounded-lg bg-slate-300">Cancel</a>
+                <button class="p-4 py-2 rounded-lg text-white bg-slate-900">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

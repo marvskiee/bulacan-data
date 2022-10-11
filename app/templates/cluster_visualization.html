@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="z-10 flex items-center justify-center flex-col mx-7" style=" height: calc(100vh - 79px)">
+    <div class="flex flex-col rounded-lg bg-white p-8 items-center justify-center">
+        <p class="text-2xl font-semibold mb-4">Cluster Visualization</p>
+        <div class="flex items-center justify-center gap-10 sm:flex-row flex-col ">
+            <div class="flex flex-col gap-4">
+                <p class="text-center font-semibold text-2xl">Legend</p>
+                <div class="flex gap-2 flex-col">
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 bg-black block"></span>
+                        <p class="uppercase font-semibold">morning schedules</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 bg-rose-600 block"></span>
+                        <p class="uppercase font-semibold">afternoon schedules</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 bg-emerald-600 block"></span>
+                        <p class="uppercase font-semibold">evening schedules</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-62 h-62 ">
+                <img src="{{url_for('static',filename='/images/BULSU LOGO.JPG')}}" class="w-62 h-62" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

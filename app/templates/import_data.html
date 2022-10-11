@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="z-10 flex items-center justify-center flex-col mx-7" style=" height: calc(100vh - 79px)">
+    <div class="flex flex-col rounded-lg bg-white p-8">
+        <p class="text-2xl font-semibold mb-4">Import Data</p>
+        <label class="mb-4">Make sure that you follow the content format of text file or else it may result to
+            failed.</label>
+        <div class="flex gap-4">
+            <input type="file" class="w-full p-4 py-2 border rounded-lg" />
+            <button class="p-4 py-2 rounded-lg text-white bg-slate-900">Submit</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

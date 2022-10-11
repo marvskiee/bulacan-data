@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Bulacan State University</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #drawer {
+            display: none;
+        }
+
+        #burger:checked~#drawer {
+            display: block;
+        }
+
+        #triangle {
+            clip-path: polygon(50% 23%, 0% 100%, 100% 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p-4 flex items-center justify-between bg-black/80 w-full text-white sticky top-0">
+        <input type="checkbox" id="burger" class="hidden" />
+        <div id="drawer" class="fixed top-16 rounded-md bg-white text-black transition-all">
+            <div id="triangle" class="bg-white absolute -top-4 left-2 w-4 h-4"></div>
+            <ul>
+                <li class="font-semibold text-md cursor-pointer hover:bg-slate-900 hover:text-white"><a
+                        href="import_data" class="block p-4">Import
+                        Data</a></li>
+                <li class="font-semibold text-md cursor-pointer hover:bg-slate-900 hover:text-white"><a
+                        href="input_data_individually" class="block p-4">Input
+                        Data
+                        Individually</a>
+                </li>
+                <li class="font-semibold text-md cursor-pointer hover:bg-slate-900 hover:text-white"><a
+                        href="cluster_visualization" class="block p-4">Cluster
+                        Visualization</a></li>
+                <li class="font-semibold text-md cursor-pointer hover:bg-slate-900 hover:text-white"><a
+                        href="cluster_graph" class="block p-4">Cluster
+                        Graph</a>
+                </li>
+            </ul>
+        </div>
+        <label for="burger" class="cursor-pointer">
+            <img for="burger" src="{{url_for('static',filename='images/menuicon.png')}}" alt="menuicon"
+                class="w-10 h-10" />
+        </label>
+        <a href="/">
+            <div class="flex items-center gap-4 ">
+                <img src="{{url_for('static',filename='images/BULSU LOGO.JPG')}}" alt="icon"
+                    class="w-7 h-7 rounded-full" />
+                <p>Bulacan State University</p>
+            </div>
+        </a>
+        <span class="sm:block hidden"></span>
+    </div>
+    <img src="{{url_for('static',filename='images/BACKGROUND.JPG')}}" alt="bg"
+        class="w-screen h-screen object-cover fixed top-0 left-0 -z-10" />
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

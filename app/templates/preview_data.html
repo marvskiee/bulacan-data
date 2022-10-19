@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="z-10 sm:flex block items-center justify-center flex-col mx-7 py-4" style=" min-height: calc(100vh - 79px)">
+    <div class="flex rounded-lg flex-col bg-white p-8 gap-4">
+        <p class="text-2xl font-semibold text-center">Preview Added Data</p>
+        {% if students %}
+        <div class="flex gap-4 ">
+            <div>
+                <p><b>Name: </b>{{students.fullname}}</p>
+                <p><b>Year: </b>{{students.year}}</p>
+                <p><b>Section: </b>{{students.section}}</p>
+                <p><b>Address: </b>{{students.province}}, {{students.municipality}}</p>
+                <p><b>Email: </b>{{students.email}}</p>
+                <p><b>Student Number: </b>{{students.studentnumber}}</p>
+                <p class="capitalize"><b>Student Classification: </b>{{students.studentclassification}}</p>
+                <p><b>Grades per subject:</b></p>
+                <p><b>Programming 1: </b>{{students.gradep1}}</p>
+                <p><b>Programming 2: </b>{{students.gradep2}}</p>
+                <p><b>Object-Oriented Programming 1: </b>{{students.gradeop1}}</p>
+                <p><b>Object-Oriented Programming 2: </b>{{students.gradeop2}}</p>
+                <p><b>Data Structures and Algorithm: </b>{{students.gradedata}}</p>
+            </div>
+            <div>
+                <p><b>Class Schedules: </b>{{students.schedp1}}</p>
+                <p><b>Programming 1: </b>{{students.schedp2}}</p>
+                <p><b>Programming 2: </b>{{students.schedop1}}</p>
+                <p><b>Object-Oriented Programming 1: </b>{{students.schedop2}}</p>
+                <p><b>Object-Oriented Programming 2: </b>{{students.schedop2}}</p>
+                <p><b>Data Structures and Algorithm: </b>{{students.scheddata}}</p>
+            </div>
+        </div>
+        {% else %}
+        <div>Student number does not exist!</div>
+        {% endif %}
+        <a href="/input_data_individually" class="p-4 rounded-md bg-slate-900 text-white text-center">Go Back</a>
+    </div>
+</div>
+{% endblock %}

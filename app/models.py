@@ -1,21 +1,26 @@
 from enum import unique
 from app import db
 
-class Request(db.Model):
+class Student(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    data = db.Column(db.String(50),unique=True, nullable=False)
-    status =  db.Column(db.String(10), nullable=False)
+    fullname = db.Column(db.String(50),nullable=False)
+    year =  db.Column(db.String(20), nullable=False)
+    section =  db.Column(db.String(20), nullable=False)
+    email =  db.Column(db.String(50), nullable=False)
+    province =  db.Column(db.String(20), nullable=False)
+    municipality =  db.Column(db.String(20), nullable=False)
+    studentnumber =  db.Column(db.String(20), unique=True, nullable=False)
+    studentclassification =  db.Column(db.String(20), nullable=False)
+    gradep1 =  db.Column(db.String(20), nullable=True)
+    gradep2 =  db.Column(db.String(20), nullable=True)
+    gradeop1 =  db.Column(db.String(20), nullable=True)
+    gradeop2 =  db.Column(db.String(20), nullable=True)
+    gradedata =  db.Column(db.String(20), nullable=True)
+    schedp1 =  db.Column(db.String(20), nullable=True)
+    schedp2 =  db.Column(db.String(20), nullable=True)
+    schedop1 =  db.Column(db.String(20), nullable=True)
+    schedop2 =  db.Column(db.String(20), nullable=True)
+    scheddata =  db.Column(db.String(20), nullable=True)
 
     def __repr__(self):
-        return f"{self.id}, {self.data}, {self.status}"
-
-class Songs(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.Text, nullable=False)
-    artist =  db.Column(db.Text, nullable=False)
-    lyrics =  db.Column(db.Text, nullable=False)
-    mode =  db.Column(db.Text, nullable=False)
-    chords =  db.Column(db.Text, nullable=False)
-
-    def __repr__(self):
-        return f"{self.id}, {self.title}, {self.artist}, {self.lyrics}, {self.mode}, {self.chords}"
+        return f"{self.id}, {self.fullname}, {self.year}, {self.section}, {self.email}, {self.province },{self.municipality},{self.studentnumber}, {self.studentclassification},{self.gradep1}"
